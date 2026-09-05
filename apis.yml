@@ -1,7 +1,15 @@
 aid: yuze-semiconductor
 name: Yuze Semiconductor
-description: 'Yuze Semiconductor is a company surfaced via the API Evangelist harvest backlog (source:
-  secondary-market) and added to the network as a stub for full-pipeline profiling.'
+description: 'Yuze Semiconductor — legally Yunnan Yuze New Energy Co., Ltd. (云南宇泽新能源股份有限公司),
+  trading internationally as Unigrace New Energy — is a Chinese photovoltaic materials manufacturer
+  founded in May 2019 and headquartered in Kunming, Yunnan. It produces N-type solar monocrystalline
+  silicon rods and wafers covering the three mainstream N-type cell routes (HJT, TOPCon and IBC),
+  operating manufacturing bases in Chuxiong, Wenshan and Kunming in Yunnan and Yichun in Jiangxi,
+  with a sales centre in Suzhou. The company was named a 2022 Chinese Unicorn Enterprise and its
+  shares trade on secondary private markets. It is a physical-goods manufacturer: its public web
+  presence carries company, product, news and recruitment pages only, with no developer program,
+  no API, and no machine-readable specification of any kind.'
+image: https://en.yzbdt.com/favicon.ico
 url: https://raw.githubusercontent.com/api-evangelist/yuze-semiconductor/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
@@ -10,8 +18,17 @@ x-tier-reason: harvest
 specificationVersion: '0.20'
 created: '2026-09-04'
 modified: '2026-09-04'
+position: Producing
 tags:
 - Company
+- Semiconductors
+- Solar
+- Photovoltaics
+- Silicon Wafers
+- Manufacturing
+- Materials
+- Renewable Energy
+- China
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +36,35 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/yuze-semiconductor-domain-security.yml
+- type: LLMsTxt
+  url: llms/yuze-semiconductor-llms.txt
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://en.yzbdt.com/
+- type: Blog
+  url: https://en.yzbdt.com/news.html
+- type: Support
+  url: https://en.yzbdt.com/contact.html
+x-enrichment:
+  date: '2026-09-04'
+  status: minimal
+  artifacts_added: 3
+  pass: local-v3
+x-coverage:
+  state: none
+  reason: not-a-software-company
+  detail: >-
+    Yuze Semiconductor manufactures N-type solar monocrystalline silicon rods and wafers; its
+    only public web presence (en.yzbdt.com / www.yzbdt.com) is a six-section corporate brochure
+    — About, Product, Base, News, Contact, Recruitment — whose full sitemap of 68 URLs contains
+    no developer, API, or documentation page, and no api/dev/docs/developer/open subdomain
+    resolves in DNS.
+  evidence:
+  - url: https://en.yzbdt.com/sitemap.xml
+    status: 200
+  - url: https://en.yzbdt.com/.well-known/security.txt
+    status: 404
+  - url: https://en.yzbdt.com/openapi.json
+    status: 403
+  checked: '2026-09-04'

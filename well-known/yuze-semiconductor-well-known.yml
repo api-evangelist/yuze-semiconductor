@@ -1,0 +1,56 @@
+generated: '2026-09-04'
+method: probed
+source: live HTTPS probes of every host this record knows (2026-09-04)
+note: >-
+  No .well-known document is served on any Yuze Semiconductor host. security.txt returns a
+  genuine 404 ("Sorry, the request URL was not found"); every other .well-known path returns a
+  403 HTML interstitial from the site's edge WAF, which is a refusal page and NOT a document.
+  No WellKnown or SecurityTxt pointer is emitted in apis.yml, because nothing here was served.
+  The company runs no API host, so the only hosts probed are the corporate website hosts.
+hosts:
+- host: en.yzbdt.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 403
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 403
+    file: null
+  - path: /.well-known/api-catalog
+    status: 403
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 403
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 403
+    file: null
+  - path: /.well-known/agent.json
+    status: 403
+    file: null
+- host: www.yzbdt.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 403
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 403
+    file: null
+  - path: /.well-known/api-catalog
+    status: 403
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 403
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 403
+    file: null
+  - path: /.well-known/agent.json
+    status: 403
+    file: null
